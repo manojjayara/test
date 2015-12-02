@@ -1,0 +1,5 @@
+package com.merauttarakhand.service;
+
+public interface PlaceInformationService {
+getPlaceInformation(String placeName);
+}

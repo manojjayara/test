@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * A user who can book hotels.
  */
-@Entity
-@Table(name = "Customer")
+/*@Entity
+@Table(name = "Customer")*/
+@Document(collection = "users")
 public class User implements Serializable {
     private String username;
 

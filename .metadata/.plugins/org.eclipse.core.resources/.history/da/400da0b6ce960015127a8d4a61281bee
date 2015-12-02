@@ -1,0 +1,27 @@
+package com.merauttarakhand.service.Impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.merauttarakhand.dao.PlaceInformationDao;
+import com.merauttarakhand.service.PlaceInformationService;
+import com.uttarakhand.model.PlaceInformationBean;
+
+@Service("placeInformationService")
+public class PlaceInformationServiceImpl implements PlaceInformationService{
+
+@Autowired
+PlaceInformationDao placeInformationDao;
+
+	@Override
+	public PlaceInformationBean getPlaceInformation(String placeName) {
+		// TODO Auto-generated method stub
+		PlaceInformationBean  placeInformationBean=placeInformationDao.getPlaceInfoBasedOnPlaceName();
+		/*PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName("DehraDun");
+		placeInformationBean.setPlaceDescription("Capital and District");*/
+		return placeInformationBean;
+	}
+
+}

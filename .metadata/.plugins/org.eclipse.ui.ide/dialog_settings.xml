@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="378" key="DIALOG_HEIGHT"/>
+		<item value="433" key="DIALOG_X_ORIGIN"/>
+		<item value="112" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/webapp/WEB-INF/views.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/webapp/WEB-INF/homepage.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/booking-mvc/src/main/java/org/springframework/webflow/samples/booking/config/DataAccessConfig.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/config/DataAccessConfig.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/resources/META-INF/context.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/webapp/WEB-INF/place.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/uttarakhand/model/PlaceInformationBean.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/test/java/com/merauttarakhand/test/App.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/utility/MongoDbConnectionUtility.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/test/java/com/merauttarakhand/test/TestMongoDB.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/dao/PlaceInformationDao.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/service/Impl/PlaceInformationServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/controller/PlaceInformationController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/merauttarakhand/src/main/java/com/merauttarakhand/dao/Impl/PlaceInformationDaoImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="391" key="DIALOG_X_ORIGIN"/>
+			<item value="39" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

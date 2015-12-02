@@ -1,0 +1,8 @@
+package com.uttarakhand.model;
+
+import java.io.Serializable;
+
+public class PlaceInformationBean implements Serializable{
+private String placeName;
+pravate String placeDescription;
+}

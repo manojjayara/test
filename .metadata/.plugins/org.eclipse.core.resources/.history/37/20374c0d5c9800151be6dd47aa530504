@@ -1,0 +1,14 @@
+package com.merauttarakhand.utility;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.mongodb.core.MongoOperations;
+
+import com.merauttarakhand.config.MongoDbConfig;
+
+public class MongoDbConnectionUtility {
+public static MongoOperations getMongoOperations(){
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(MongoDbConfig.class);
+	return(MongoOperations) ctx.getBean("mongoTemplate");
+}
+}

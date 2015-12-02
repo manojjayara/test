@@ -1,0 +1,7 @@
+package com.merauttarakhand.service;
+
+import com.uttarakhand.model.PlaceInformationBean;
+
+public interface PlaceInformationService {
+PlaceInformationBean getPlaceInformation(String placeName);
+}

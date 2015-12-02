@@ -1,0 +1,8 @@
+package com.merauttarakhand.test;
+
+public class TestMongoJdbc {
+
+	public static void main(String[] args) {
+		
+	}
+}

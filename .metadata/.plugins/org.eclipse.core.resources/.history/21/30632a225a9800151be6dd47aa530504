@@ -1,0 +1,58 @@
+package com.merauttarakhand.service.Impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.merauttarakhand.dao.PlaceInformationDao;
+import com.merauttarakhand.service.PlaceInformationService;
+import com.merauttarakhand.dao.CustomerRepository;
+import com.uttarakhand.model.Customer;
+import com.uttarakhand.model.PlaceInformationBean;
+
+@Service("placeInformationService")
+public class PlaceInformationServiceImpl implements PlaceInformationService{
+
+@Autowired
+PlaceInformationDao placeInformationDao;
+/*
+@Autowired
+private CustomerRepository repository;*/
+
+	@Override
+	public PlaceInformationBean getPlaceInformation(String placeName) {
+		// TODO Auto-generated method stub
+		PlaceInformationBean  placeInformationBean=placeInformationDao.getPlaceInfoBasedOnPlaceName();
+		/*PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName("DehraDun");
+		placeInformationBean.setPlaceDescription("Capital and District");*/
+		return placeInformationBean;
+	}
+	
+	@Override
+	public List<PlaceInformationBean> getPlaceInformationList(String placeName) {
+		// TODO Auto-generated method stub
+		List<PlaceInformationBean>  placeInformationBeanList=placeInformationDao.getPlacesInformationList();
+		/*PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName("DehraDun");
+		placeInformationBean.setPlaceDescription("Capital and District");*/
+		return placeInformationBeanList;
+	}
+	
+	/*public List<Customer> getCustomerList(){
+		repository.save(new Customer("Alice", "Smith"));
+		repository.save(new Customer("Bob", "Smith"));
+		System.out.println("Customers found with findByLastName('Smith'):");
+		return repository.findByLastName("Smith");
+	}
+	
+	public Customer getCustomer(){
+		repository.save(new Customer("Alice", "Smith"));
+		repository.save(new Customer("Bob", "Smith"));
+		
+		return repository.findByFirstName("Alice");
+	}*/
+
+}

@@ -1,0 +1,48 @@
+package com.merauttarakhand.dao.Impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
+import com.merauttarakhand.config.DataAccessConfig;
+import com.merauttarakhand.dao.PlaceInformationDao;
+import com.uttarakhand.model.PlaceInformationBean;
+
+@Component("placeInformationDao")
+@Repository
+public class PlaceInformationDaoImpl implements PlaceInformationDao {
+
+	
+	@Autowired
+	DataAccessConfig dataAccessConfig;
+	
+	@Override
+	public PlaceInformationBean getPlaceInfoBasedOnPlaceName() {
+		// TODO Auto-generated method stub
+		PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName("DehraDun");
+		placeInformationBean.setPlaceDescription("Capital and District");
+		return placeInformationBean;
+	}
+	
+	public List<PlaceInformationBean> getPlacesInformation(){
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(dataAccessConfig.dataSource());
+		jdbcTemplate.queryForList("select * from PlaceInformation",new PlaceInformationRowMapper()<PlaceInformationBean>){
+			PlaceInformationRowMapper mapper=new PlaceInformationRowMapper();
+			  public PlaceInformationBean extractData(final ResultSet rs) throws SQLException{
+			    // collect data from rs here ...
+				 
+			    return mapper.extract;
+			  }
+		}
+	}
+	
+	
+
+}

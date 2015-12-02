@@ -1,0 +1,14 @@
+package com.merauttarakhand.test;
+
+public class TestMongoJdbc {
+
+	public static void main(String[] args) {
+		try {
+		       connection = DriverManager.getConnection("", "", "");
+		    } catch (SQLException e) {
+		      System.out.println("ERROR:  Unable to establish a connection with the database!");
+		      e.printStackTrace();
+		      return;
+		    }
+	}
+}

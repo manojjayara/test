@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource name="jdbc/mongoDB" auth="Container" type="javax.sql.DataSource"
+              maxActive="50" maxIdle="30" maxWait="10000"
+              username="deepak" password="deepak"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="mongodb://deepak:deepak@ds055584.mongolab.com:55584/uk_info_db"/>
+</Context>

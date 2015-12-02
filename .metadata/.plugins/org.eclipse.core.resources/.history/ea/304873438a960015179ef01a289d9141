@@ -1,0 +1,19 @@
+package com.merauttarakhand.dao;
+
+import org.springframework.stereotype.Component;
+
+import com.uttarakhand.model.PlaceInformationBean;
+
+@Component(name="placeInformationDao")
+public class PlaceInformationDaoImpl implements PlaceInformationDao{
+
+	@Override
+	public PlaceInformationBean getPlaceInfoBasedOnPlaceName() {
+		// TODO Auto-generated method stub
+		PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName("DehraDun");
+		placeInformationBean.setPlaceDescription("Capital and District");
+		return placeInformationBean;
+	}
+
+}

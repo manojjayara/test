@@ -1,0 +1,23 @@
+package com.uttarakhand.model;
+
+import java.io.Serializable;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document
+public class PlaceInformationBean implements Serializable{
+private String placeName;
+private String placeDescription;
+public String getPlaceName() {
+	return placeName;
+}
+public void setPlaceName(String placeName) {
+	this.placeName = placeName;
+}
+public String getPlaceDescription() {
+	return placeDescription;
+}
+public void setPlaceDescription(String placeDescription) {
+	this.placeDescription = placeDescription;
+}
+
+}

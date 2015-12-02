@@ -1,0 +1,20 @@
+package com.merauttarakhand.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class TestMongoJdbc {
+
+	public static void main(String[] args) {
+		Connection connection =null;
+		try {
+		       connection = DriverManager.getConnection("ds055584.mongolab.com:55584/uk_info_db", "deepak", "deepak");
+		       System.out.println("connection etablished");
+		    } catch (SQLException e) {
+		      System.out.println("ERROR:  Unable to establish a connection with the database!");
+		      e.printStackTrace();
+		      return;
+		    }
+	}
+}

@@ -1,0 +1,5 @@
+package com.uttarakhand.model;
+
+public class Customer {
+
+}

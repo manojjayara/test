@@ -1,0 +1,5 @@
+package com.merauttarakhand.dao;
+
+public interface PlaceInformationDao {
+
+}

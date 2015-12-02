@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="merauttarakhand" name="meraUttarakhand1" path="C:/meraUttarakhandProject/booking-mvc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/meraUttarakhand1" type="j2ee"/>
+</server>

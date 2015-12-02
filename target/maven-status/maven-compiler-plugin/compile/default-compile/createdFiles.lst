@@ -6,6 +6,7 @@ org\springframework\webflow\samples\booking\config\SecurityWebApplicationInitial
 org\springframework\webflow\samples\booking\JpaBookingService.class
 org\springframework\webflow\samples\booking\config\WebFlowConfig.class
 org\springframework\webflow\samples\booking\User.class
+org\springframework\webflow\samples\booking\config\MongoDbCOnfig.class
 org\springframework\webflow\samples\booking\SearchCriteria.class
 org\springframework\webflow\samples\booking\HotelsController.class
 org\springframework\webflow\samples\booking\BookingDateRange.class

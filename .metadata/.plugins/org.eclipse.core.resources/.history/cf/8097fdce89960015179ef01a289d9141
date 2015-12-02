@@ -1,0 +1,15 @@
+package com.merauttarakhand.service.Impl;
+
+import org.springframework.stereotype.Service;
+
+import com.merauttarakhand.service.PlaceInformationService;
+@Service("placeInformation")
+public class PlaceInformationServiceImpl implements PlaceInformationService{
+
+	@Override
+	public String getPlaceInformation(String placeName) {
+		// TODO Auto-generated method stub
+		return "Deharadun";
+	}
+
+}

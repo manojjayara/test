@@ -1,0 +1,91 @@
+package com.merauttarakhand.config;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.js.ajax.AjaxUrlBasedViewResolver;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.tiles2.TilesConfigurer;
+import org.springframework.webflow.mvc.servlet.FlowHandlerAdapter;
+import org.springframework.webflow.mvc.servlet.FlowHandlerMapping;
+import org.springframework.webflow.mvc.view.FlowAjaxTilesView;
+import org.thymeleaf.dialect.IDialect;
+import org.thymeleaf.extras.conditionalcomments.dialect.ConditionalCommentsDialect;
+import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
+import org.thymeleaf.extras.tiles2.dialect.TilesDialect;
+import org.thymeleaf.extras.tiles2.spring4.web.configurer.ThymeleafTilesConfigurer;
+import org.thymeleaf.extras.tiles2.spring4.web.view.FlowAjaxThymeleafTilesView;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.view.AjaxThymeleafViewResolver;
+import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
+
+//import com.merauttarakhand.controller.BookingFlowHandler;
+
+@EnableWebMvc
+@Configuration
+public class WebMvcConfig extends WebMvcConfigurerAdapter {
+
+	@Autowired
+	private WebFlowConfig webFlowConfig;
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/", "classpath:/META-INF/web-resources/");
+	}
+
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("home");
+		
+	}
+
+	@Bean
+	public FlowHandlerMapping flowHandlerMapping() {
+		FlowHandlerMapping handlerMapping = new FlowHandlerMapping();
+		handlerMapping.setOrder(-1);
+		handlerMapping.setFlowRegistry(this.webFlowConfig.flowRegistry());
+		return handlerMapping;
+	}
+
+	@Bean
+	public FlowHandlerAdapter flowHandlerAdapter() {
+		FlowHandlerAdapter handlerAdapter = new FlowHandlerAdapter();
+		handlerAdapter.setFlowExecutor(this.webFlowConfig.flowExecutor());
+		handlerAdapter.setSaveOutputToFlashScopeOnRedirect(true);
+		return handlerAdapter;
+	}
+
+
+	@Bean
+	public TilesConfigurer tilesConfigurer() {
+		TilesConfigurer templateResolver = new TilesConfigurer();
+		//templateResolver.setDefinitions("/WEB-INF/**/views.xml");
+		templateResolver.setDefinitions(new String[] {"/WEB-INF/**/views.xml"});
+		templateResolver.setCheckRefresh(true);
+		//templateResolver.setPreparerFactoryClass(org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory.class);
+		//templateResolver.setPreparerFactoryClass(org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory.class);
+		return templateResolver;
+	}
+	
+	@Bean
+	public AjaxUrlBasedViewResolver tilesViewResolver() {
+		AjaxUrlBasedViewResolver viewResolver = new AjaxUrlBasedViewResolver();
+		viewResolver.setViewClass(FlowAjaxTilesView.class);
+		return viewResolver;
+	}
+	
+	
+
+}

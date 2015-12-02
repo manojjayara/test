@@ -1,0 +1,7 @@
+package com.merauttarakhand.dao;
+
+import com.uttarakhand.model.PlaceInformationBean;
+
+public interface PlaceInformationDao {
+PlaceInformationBean getPlaceInfoBasedOnPlaceName();
+}

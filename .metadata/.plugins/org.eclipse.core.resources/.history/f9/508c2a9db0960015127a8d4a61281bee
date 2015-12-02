@@ -1,0 +1,22 @@
+package com.merauttarakhand.dao.Impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ResultSetExtractor;
+
+import com.uttarakhand.model.PlaceInformationBean;
+
+public class PlaceInformationSetExtractor implements ResultSetExtractor<PlaceInformationBean>{
+
+	@Override
+	public PlaceInformationBean extractData(ResultSet rs) throws SQLException, DataAccessException {
+		// TODO Auto-generated method stub
+		PlaceInformationBean placeInformationBean=new PlaceInformationBean();
+		placeInformationBean.setPlaceName(rs.getString(0));
+		placeInformationBean.setPlaceDescription(rs.getString(1));
+		return null;
+	}
+
+}

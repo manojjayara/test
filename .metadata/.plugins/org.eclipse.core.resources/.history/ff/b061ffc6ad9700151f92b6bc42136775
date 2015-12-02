@@ -1,0 +1,10 @@
+package com.merauttarakhand.service;
+
+import java.util.List;
+
+import com.uttarakhand.model.PlaceInformationBean;
+
+public interface PlaceInformationService {
+PlaceInformationBean getPlaceInformation(String placeName);
+public List<PlaceInformationBean> getPlaceInformationList(String placeName);
+}

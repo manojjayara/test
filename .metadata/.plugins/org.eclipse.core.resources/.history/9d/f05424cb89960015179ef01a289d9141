@@ -1,0 +1,13 @@
+package com.merauttarakhand.service.Impl;
+
+import com.merauttarakhand.service.PlaceInformationService;
+
+public class PlaceInformationServiceImpl implements PlaceInformationService{
+
+	@Override
+	public String getPlaceInformation(String placeName) {
+		// TODO Auto-generated method stub
+		return "Deharadun";
+	}
+
+}

@@ -1,1 +1,4 @@
+org\springframework\webflow\samples\booking\MongoDbConfigTest.class
+org\springframework\webflow\samples\booking\MongoDbTest1.class
 org\springframework\webflow\samples\booking\BookingFlowExecutionTests.class
+org\springframework\webflow\samples\booking\TestMongoDB.class

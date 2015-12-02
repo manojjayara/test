@@ -1,0 +1,5 @@
+package com.merauttarakhand.dao.Impl;
+import org.springframework.jdbc.core.RowMapper;
+public class PlaceInformationRowMapper implements RowMapper {
+
+}
