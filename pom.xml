@@ -24,7 +24,7 @@
 		<repository>
 			<id>spring</id>
 			<name>Spring Repository</name>
-			<url>http://repo.spring.io/snapshot</url>
+			<url>https://repo.spring.io/snapshot</url>
 			<releases><enabled>true</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
